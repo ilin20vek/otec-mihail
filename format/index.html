@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Отец Михаил, Вы проповедник</title>
+<meta name="theme-color" content="#0d0a08">
+<meta name="description" content="Что у Вас уже есть и что поправить в записи, чтобы ролики смотрели в соцсетях. Игорь Ильин, «Бизнес по-русски»">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Отец Михаил, Вы проповедник. Осталось чуть-чуть поработать над формой">
+<meta property="og:description" content="Что у Вас уже есть и что поправить в записи, чтобы ролики смотрели в соцсетях. Игорь Ильин, «Бизнес по-русски»">
+<meta property="og:url" content="https://ilin20vek.github.io/otec-mihail/format/">
+<meta property="og:image" content="https://ilin20vek.github.io/otec-mihail/format/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script>document.documentElement.className+=' js'</script>
+<style>
+@font-face{font-family:'Sofia Sans';src:url(fonts/sofia-sans-400.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Sofia Sans';src:url(fonts/sofia-sans-700.woff2) format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'SSEC';src:url(fonts/sofia-sans-extra-condensed-800.woff2) format('woff2');font-weight:800;font-display:swap}
+@font-face{font-family:'OST';src:url(fonts/old-standard-tt-italic.woff2) format('woff2');font-weight:400;font-style:italic;font-display:swap}
+/* цвета его доски: старое золото и бордо на тёмном */
+:root{--bg:#0d0a08;--pl:#18120e;--pl2:#241a13;--li:rgba(232,205,160,.15);--tx:#f3ede4;--tx2:#ddd3c5;--mut:#b8aa96;--zo:#d6ae62;--bo:#8e2a2a;--bo2:#5c1d1d;--hd:'SSEC','Arial Narrow',sans-serif;--sr:'OST',Georgia,serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 18px/1.55 'Sofia Sans',system-ui,sans-serif}
+.ek{position:relative;padding:clamp(64px,9vw,120px) 0}
+.ek+.ek{border-top:1px solid var(--li)}
+.in{max-width:1080px;margin:0 auto;padding:0 20px}
+.nom{font:800 16px/1 var(--hd);letter-spacing:.14em;color:var(--zo);text-transform:uppercase;margin:0 0 18px}
+h1,h2{margin:0;font-family:var(--hd);font-weight:800;line-height:.98;letter-spacing:.005em;text-wrap:balance}
+h1{font-size:clamp(46px,7.4vw,92px)}
+h2{font-size:clamp(36px,5.2vw,62px);max-width:16em}
+h1 em,h2 em{font:italic 400 1em/1 var(--sr);color:var(--zo);letter-spacing:0}
+.tx{max-width:40em;color:var(--tx2)}
+.tx p{margin:18px 0 0}
+.tx b{color:var(--tx)}
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.vid{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+
+/* 0 */
+.e0{min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+.e0 .svet{position:absolute;inset:0;background:radial-gradient(48% 62% at 78% 46%,rgba(142,42,42,.42),transparent 70%),radial-gradient(30% 40% at 76% 30%,rgba(214,174,98,.14),transparent 70%)}
+.e0 .foto{position:absolute;right:0;top:0;height:100%;width:46%;object-fit:cover;object-position:60% 30%;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 30%);mask-image:linear-gradient(to right,transparent 0,#000 30%);opacity:.9}
+.e0 .in{position:relative;width:100%}
+.e0 .tekst{max-width:620px}
+.obr{display:block;font:italic 400 clamp(30px,4.2vw,46px)/1.1 var(--sr);color:var(--zo);margin-bottom:12px}
+.e0 .tx{font-size:clamp(18px,1.6vw,21px)}
+.podp{margin:28px 0 0;font-size:16px;color:var(--mut)}
+.podp b{display:block;color:var(--tx);font-size:17px}
+
+/* 1: цитаты */
+.cit{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:38px 0 0}
+.cit>div{background:var(--pl);border:1px solid var(--li);border-radius:18px;padding:24px}
+.cit>div:first-child{grid-column:1/-1;background:linear-gradient(135deg,rgba(142,42,42,.28),var(--pl) 60%);border-color:rgba(214,174,98,.35)}
+.cit h3{margin:0 0 14px;font:800 clamp(24px,2.6vw,30px)/1.05 var(--hd);color:var(--tx)}
+.cit q{display:block;quotes:none;font:italic 400 clamp(21px,2.2vw,25px)/1.35 var(--sr);color:var(--zo);margin:0 0 12px}
+.cit>div:first-child q{font-size:clamp(24px,2.8vw,32px)}
+.cit p{margin:0;font-size:16px;line-height:1.45;color:var(--mut)}
+
+/* 2: ролик */
+.dv{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+.tel{position:relative;width:300px;max-width:100%;margin:0 auto;border-radius:34px;padding:10px;background:#000;box-shadow:0 0 0 1.5px #3a2e24,0 30px 80px rgba(0,0,0,.6),0 0 90px rgba(142,42,42,.25)}
+.tel video{display:block;width:100%;height:auto;aspect-ratio:9/16;border-radius:25px;background:#000}
+.shapka{margin:26px 0 0;padding:18px 20px;border-left:3px solid var(--zo);background:rgba(142,42,42,.16);border-radius:0 14px 14px 0;max-width:34em}
+.shapka p{margin:0;font:italic 400 clamp(21px,2.4vw,25px)/1.3 var(--sr);color:var(--tx)}
+.shapka small{display:block;margin-top:8px;font-size:15px;color:var(--mut)}
+
+/* 3: храм и лента */
+.dva{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:36px 0 0;max-width:860px}
+.dva>div{border-radius:18px;padding:24px;border:1px solid var(--li);background:var(--pl)}
+.dva>div+div{background:var(--bo2);border-color:var(--zo)}
+.dva b{display:block;font:800 clamp(56px,8vw,88px)/.9 var(--hd);color:var(--tx);margin:0 0 10px}
+.dva span{display:block;font:800 22px/1.1 var(--hd);color:var(--zo);margin:0 0 8px;letter-spacing:.04em;text-transform:uppercase}
+.dva p{margin:0;font-size:16px;line-height:1.45;color:var(--tx2)}
+
+/* 4: мелочи */
+.mel{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:38px 0 0;padding:0;list-style:none}
+.mel li{display:flex;flex-direction:column;background:var(--pl);border:1px solid var(--li);border-radius:18px;padding:24px}
+.mel .n{font:800 46px/1 var(--hd);color:var(--zo);margin:0 0 6px}
+.mel h3{margin:0 0 10px;font:800 clamp(26px,2.8vw,32px)/1.02 var(--hd)}
+.mel p{margin:0 0 16px;font-size:16px;line-height:1.5;color:var(--tx2)}
+.mel .sd{margin-top:auto;padding:14px 16px;border-radius:12px;background:rgba(214,174,98,.1);border:1px solid rgba(214,174,98,.35);font-size:16px;line-height:1.45;color:var(--tx)}
+.mel .sd b{display:block;font:800 15px/1 var(--hd);letter-spacing:.12em;text-transform:uppercase;color:var(--zo);margin-bottom:6px}
+.glaza{display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:center;margin:0 0 16px}
+.glaza img{width:150px;height:auto;aspect-ratio:9/16;object-fit:cover;object-position:50% 20%;border-radius:12px;border:1px solid var(--li)}
+.glaza p{margin:0}
+
+/* 5: способы */
+.spos{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:38px 0 0}
+.spos>div{background:var(--pl);border:1.5px solid var(--li);border-radius:18px;padding:26px}
+.spos>div:first-child{border-color:var(--zo)}
+.spos .n{font:800 15px/1 var(--hd);letter-spacing:.14em;text-transform:uppercase;color:var(--zo);margin:0 0 10px}
+.spos h3{margin:0 0 12px;font:800 clamp(28px,3vw,36px)/1 var(--hd)}
+.spos p{margin:0 0 12px;font-size:16px;line-height:1.5;color:var(--tx2)}
+.spos ul{margin:0 0 14px;padding:0;list-style:none}
+.spos li{position:relative;padding:0 0 10px 26px;font-size:16px;line-height:1.45;color:var(--tx)}
+.spos li:before{content:"";position:absolute;left:4px;top:.55em;width:9px;height:9px;border-radius:50%;background:var(--zo)}
+.spos .pos{margin:16px 0 0;padding:14px 16px;border-radius:12px;background:var(--bo2);border-left:4px solid var(--zo);color:var(--tx)}
+
+/* 6: четыре шага */
+.shagi{margin:38px 0 0;padding:0;list-style:none;max-width:860px;counter-reset:s}
+.shagi li{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--li)}
+.shagi li:before{counter-increment:s;content:counter(s);font:800 56px/1 var(--hd);color:var(--zo)}
+.shagi h3{margin:0 0 8px;font:800 clamp(24px,2.6vw,30px)/1.05 var(--hd)}
+.shagi q{display:block;quotes:none;font:italic 400 clamp(20px,2.2vw,24px)/1.35 var(--sr);color:var(--tx2)}
+.itog{margin:26px 0 0;font:800 clamp(26px,3vw,34px)/1.1 var(--hd);color:var(--zo)}
+
+/* 7 */
+.sbil{max-width:860px;padding:28px;border-radius:18px;background:var(--bo2);border:1.5px solid var(--zo);border-left-width:6px}
+.sbil h2{font-size:clamp(32px,4vw,46px)}
+.sbil p{margin:14px 0 0;font-size:19px;line-height:1.5;color:var(--tx)}
+
+/* 8: место Игоря */
+.mesto{margin:30px 0 0;max-width:860px;min-height:180px;border:1.5px dashed rgba(214,174,98,.6);border-radius:18px;padding:26px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--zo);font:italic 400 22px/1.3 var(--sr)}
+
+/* 9 */
+.e9{background:radial-gradient(60% 80% at 50% 100%,rgba(142,42,42,.32),transparent 70%)}
+.e9 .tx{font-size:clamp(19px,1.8vw,22px)}
+.e9 .vash{margin:26px 0 0;display:flex;flex-wrap:wrap;gap:10px;padding:0;list-style:none}
+.e9 .vash li{border:1.5px solid var(--zo);border-radius:999px;padding:10px 18px;font:700 17px/1.2 'Sofia Sans';color:var(--tx)}
+.e9 .podp{margin-top:34px}
+
+@media (max-width:820px){
+  body{font-size:17px}
+  .e0{display:block;min-height:0;padding-top:0}
+  .e0 .foto{position:relative;display:block;width:100%;height:62vh;max-height:560px;opacity:1;-webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,#000 55%,transparent 100%)}
+  .e0 .in{margin-top:-90px}
+  .cit,.dva,.mel,.spos,.dv{grid-template-columns:1fr}
+  .cit>div:first-child{grid-column:auto}
+  .dv{gap:34px}
+  .tel{width:270px}
+  .glaza{grid-template-columns:110px 1fr}
+  .glaza img{width:110px}
+  .shagi li{grid-template-columns:44px 1fr;gap:12px}
+  .shagi li:before{font-size:44px}
+}
+</style>
+</head>
+<body>
+
+<section class="ek e0">
+  <div class="svet"></div>
+  <img class="foto" src="img/lico.jpg" alt="Отец Михаил на беседе в храме">
+  <div class="in">
+    <div class="tekst rv">
+      <span class="obr">Отец Михаил,</span>
+      <h1>Вы проповедник. <em>Осталось чуть-чуть</em> поработать над формой.</h1>
+      <div class="tx">
+        <p>Я посмотрел Вашу беседу о Священном Писании от 8 ноября, все сорок минут, и мы с командой разобрали её слово за словом. Пишу, что увидели. Сначала о том, что у Вас уже есть, потом о мелочах, которые мешают роликам дойти до людей в соцсетях.</p>
+      </div>
+      <p class="podp"><b>Игорь Ильин</b>«Бизнес по-русски»</p>
+    </div>
+  </div>
+</section>
+
+<section class="ek">
+  <div class="in">
+    <p class="nom rv">Что у Вас уже есть</p>
+    <h2 class="rv">Ролик делает не монтажёр, а <em>человек в кадре</em></h2>
+    <div class="tx rv"><p>Монтажом можно убрать лишнее, но нельзя добавить живого. У Вас живое есть, и вот где мы это услышали.</p></div>
+    <div class="cit">
+      <div class="rv">
+        <h3>Вы отвечаете на вопросы, от которых другие уходят</h3>
+        <q>«Господь хотел, чтобы Авраам сроднился Ему, понял Его... и чтобы у Бога был повод ответить взаимностью».</q>
+        <p>Вас спросили, зачем Бог велел Аврааму принести в жертву сына. Вы ответили коротко и неожиданно.</p>
+      </div>
+      <div class="rv">
+        <h3>Вы утешаете, а не отчитываете</h3>
+        <q>«Хоть поскрипываешь, приходишь, каешься, но дальше продолжаешь его нести... ты не выпустил его абсолютно из рук».</q>
+        <p>Человеку, который думает, что всё пропало, это нужнее любой морали.</p>
+      </div>
+      <div class="rv">
+        <h3>Вы говорите так, что запоминается с первого раза</h3>
+        <q>«Страдания без смысла, они невыносимы».</q>
+        <p>Такую фразу человек унесёт с собой и перешлёт другу.</p>
+      </div>
+      <div class="rv">
+        <h3>Вы умеете посмеяться над собой</h3>
+        <q>«Бог, который трудился, Его руки были замозолены от труда, а мне, лентяю, надо поднимать свою попу».</q>
+        <p>Мужчина, который слышит такое от священника, понимает: со мной говорят на равных.</p>
+      </div>
+      <div class="rv">
+        <h3>У Вас есть свои истории</h3>
+        <q>«Вот я, когда первый раз со своей супругой, ещё деток у нас не было, мы были на этой постановке... меня прям пробило».</q>
+        <p>Одна история из жизни держит человека у экрана лучше трёх цитат.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ek">
+  <div class="in dv">
+    <div>
+      <p class="nom rv">Ролик про Авраама</p>
+      <h2 class="rv">Первый ролик <em>уже есть</em></h2>
+      <div class="tx rv">
+        <p>Это Ваш ответ про Авраама, 42 секунды. Вопрос из зала идёт текстом сверху, ответ звучит Вашим голосом с первой секунды. Мы ничего не переставляли и ничего за Вас не досказали, только убрали лишнее между фразами.</p>
+      </div>
+      <div class="shapka rv"><p>Я посмотрел, и мне очень понравилось.</p><small>Игорь</small></div>
+    </div>
+    <div class="tel rv">
+      <video src="v/n02.mp4" poster="img/k3.jpg" controls playsinline preload="none"></video>
+    </div>
+  </div>
+</section>
+
+<section class="ek">
+  <div class="in">
+    <p class="nom rv">Почему из сорока минут вышло немного</p>
+    <h2 class="rv">Слова те же самые, <em>меняется только форма</em></h2>
+    <div class="tx rv">
+      <p>В беседе мы нашли семь ответов, из которых мог бы получиться ролик. Целиком держатся три. Остальные четыре рассыпались не потому, что Вы плохо сказали. Просто беседа в храме и ролик в телефоне устроены по-разному.</p>
+    </div>
+    <div class="dva">
+      <div class="rv"><span>В храме</span><b>40 минут</b><p>Люди пришли слушать и дают Вам всё время беседы.</p></div>
+      <div class="rv"><span>В соцсетях</span><b>2 секунды</b><p>Человек листает: понял, о чём речь, - остался, не понял - пролистал дальше.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ek">
+  <div class="in">
+    <p class="nom rv">Четыре мелочи</p>
+    <h2 class="rv">Что мешало, и <em>что с этим делать</em></h2>
+    <ul class="mel">
+      <li class="rv">
+        <div class="n">1</div>
+        <h3>Мысль уходит в сторону</h3>
+        <p>В живой беседе это нормально: вставка, «как бы», «вот, просто, вот», потом возврат. Но ролик режется только между фразами, и если мысль не закрыта, кусок не встаёт.</p>
+        <div class="sd"><b>Что делать</b>Одна мысль от вопроса до вывода, без отступлений. Хорошее отступление скажите отдельно, из него выйдет другой ролик.</div>
+      </li>
+      <li class="rv">
+        <div class="n">2</div>
+        <h3>Фразы идут без вдоха</h3>
+        <p>Слово посередине мы никогда не режем, поэтому монтажу нужен зазор между фразами.</p>
+        <div class="sd"><b>Что делать</b>После каждой фразы короткий вдох. Полсекунды нам хватит.</div>
+      </li>
+      <li class="rv">
+        <div class="n">3</div>
+        <h3>Глаза смотрят вниз</h3>
+        <div class="glaza">
+          <img src="img/k26.jpg" alt="Кадр из ролика: взгляд на аналой">
+          <p>В ролике про Авраама Вы почти всё время смотрите на аналой, а когда наклоняетесь к книге, камера видит макушку. Человек в телефоне должен видеть глаза: тогда он чувствует, что говорят ему.</p>
+        </div>
+        <div class="sd"><b>Что делать</b>Когда отвечаете, поднимите голову и смотрите в камеру. Книгу можно взять в руки и поднять.</div>
+      </li>
+      <li class="rv">
+        <div class="n">4</div>
+        <h3>Камера одна, снимает горизонтально и стоит далеко</h3>
+        <p>В телефоне Ваше лицо выходит маленьким, за головой иконы, рядом прихожане, которых мы без их согласия не показываем.</p>
+        <div class="sd"><b>Что делать</b>Отдельный телефон вертикально, на уровне глаз, по грудь. Иконы сбоку, а не за головой.</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="ek">
+  <div class="in">
+    <p class="nom rv">Как записываться</p>
+    <h2 class="rv">Два способа, <em>выбирайте любой</em></h2>
+    <div class="spos">
+      <div class="rv">
+        <p class="n">Первый</p>
+        <h3>Беседа с прихожанами, как сейчас</h3>
+        <p>Не отказывайтесь от неё: вопросы из зала живые, а живое и смотрят. Добавьте три вещи.</p>
+        <ul>
+          <li>Второй телефон вертикально на штативе, крупно на Вас, и петличку на подрясник.</li>
+          <li>Вопрос из зала повторите вслух своими словами: «Меня спросили, зачем Бог испытал Авраама». Тогда ролик начинается Вашим голосом, а голос прихожанина не нужен.</li>
+          <li>Ответ закончите одной фразой-выводом.</li>
+        </ul>
+        <p class="pos">И после беседы десять минут: два-три лучших ответа скажите ещё раз прямо в камеру, коротко, как будто перед Вами один человек. Это и будут самые сильные ролики недели.</p>
+      </div>
+      <div class="rv">
+        <p class="n">Второй</p>
+        <h3>Вечер записи по темам</h3>
+        <p>Один вечер в неделю, десять тем, каждая на 40-60 секунд.</p>
+        <ul>
+          <li>Перед темой назовите вслух её номер и помолчите две секунды.</li>
+          <li>Каждую тему скажите два раза.</li>
+        </ul>
+        <p>Пятьдесят тем у нас уже подобраны, первые десять как раз на один вечер.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ek">
+  <div class="in">
+    <p class="nom rv">Ответ на минуту</p>
+    <h2 class="rv">Четыре шага <em>на Вашем же ответе</em> про Авраама</h2>
+    <ol class="shagi">
+      <li class="rv"><div><h3>Первая фраза - сам вопрос, коротко и остро</h3><q>«Зачем Бог велел Аврааму убить долгожданного сына?»</q></div></li>
+      <li class="rv"><div><h3>Один образ или одна история</h3><q>«Когда человек переживает невероятное испытание, его может понять только тот, кто то же самое пережил».</q></div></li>
+      <li class="rv"><div><h3>Вывод одной фразой</h3><q>«Чтобы у Бога был повод ответить взаимностью».</q></div></li>
+      <li class="rv"><div><h3>Ваше прощание</h3><q>«Крепко обнимаю. С Богом».</q></div></li>
+    </ol>
+    <p class="itog rv">Сорок-шестьдесят секунд. Больше ничего не нужно.</p>
+  </div>
+</section>
+
+<section class="ek">
+  <div class="in">
+    <div class="sbil rv">
+      <h2>Если сбились</h2>
+      <p>Не останавливайтесь и не начинайте всё заново. Вдох, и повторите фразу с начала, мы возьмём лучший дубль. Ошибаются все, а смотрят того, кто записал и выложил.</p>
+    </div>
+  </div>
+</section>
+
+<section class="ek" id="ot-igorya">
+  <div class="in">
+    <p class="nom rv">От Игоря</p>
+    <h2 class="rv">Ещё от меня</h2>
+    <div class="tx rv"><p>Четыре вещи про картинку. Это мелочи, но по ним человек за две секунды решает, смотреть дальше или листать.</p></div>
+    <ul class="mel">
+      <li class="rv">
+        <div class="n">1</div>
+        <h3>Петличку повыше</h3>
+        <p>Прикрепите её ближе к вороту. Чем ближе микрофон ко рту, тем чище голос и тише шорох одежды и эхо храма.</p>
+      </li>
+      <li class="rv">
+        <div class="n">2</div>
+        <h3>Кадр вертикальный и ближе</h3>
+        <p>Телефон стоит вертикально, в кадре Вы по грудь. На маленьком экране лицо должно быть крупным, иначе его не разглядеть.</p>
+      </li>
+      <li class="rv">
+        <div class="n">3</div>
+        <h3>Свет на лицо, а не за спину</h3>
+        <p>Садитесь так, чтобы свет падал на лицо. Если за спиной окно или яркая стена, камера подстроится под фон: он выйдет засвеченным, а лицо тёмным.</p>
+      </li>
+      <li class="rv">
+        <div class="n">4</div>
+        <h3>Кольцевая лампа</h3>
+        <p>Чаще всего она нужна, хотя и не всегда: при хорошем дневном свете можно обойтись без неё. Но лучше купить. Качественная картинка - это уважение к зрителям.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="ek e9">
+  <div class="in">
+    <h2 class="rv">Отец Михаил, главное <em>у Вас уже есть</em></h2>
+    <div class="tx rv">
+      <p>Вы говорите о вере так, что люди задают вопросы и запоминают ответы. Наша работа - донести это до тех, кто листает соцсети.</p>
+    </div>
+    <ul class="vash rv"><li>одна мысль</li><li>глаза в камеру</li><li>вдох между фразами</li></ul>
+    <div class="tx rv"><p>Остальное сделаем мы.</p></div>
+    <p class="podp rv"><b>Игорь Ильин</b>«Бизнес по-русски»</p>
+  </div>
+</section>
+
+<script>
+(function(){var e=document.querySelectorAll('.rv');if(!('IntersectionObserver' in window)){e.forEach(function(x){x.classList.add('vid')});return}
+var o=new IntersectionObserver(function(z){z.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vid');o.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});e.forEach(function(x){o.observe(x)})})();
+</script>
+</body>
+</html>
