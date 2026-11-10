@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>VPN и доступ к каналу</title>
+<meta name="theme-color" content="#0d0a08">
+<meta name="description" content="Как поставить VPN на Mac и дать Игорю доступ к каналу YouTube.">
+<style>
+@font-face{font-family:'Sofia Sans';src:url(../youtube/fonts/sofia-sans-400.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Sofia Sans';src:url(../youtube/fonts/sofia-sans-700.woff2) format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'SSEC';src:url(../youtube/fonts/sofia-sans-extra-condensed-800.woff2) format('woff2');font-weight:800;font-display:swap}
+@font-face{font-family:'OST';src:url(../youtube/fonts/old-standard-tt-italic.woff2) format('woff2');font-weight:400;font-style:italic;font-display:swap}
+:root{--bg:#0d0a08;--pl:#18120e;--pl2:#241a13;--li:rgba(232,205,160,.15);--tx:#f3ede4;--tx2:#ddd3c5;--mut:#b8aa96;--zo:#d6ae62;--bo:#8e2a2a;--bo2:#5c1d1d;--hd:'SSEC','Arial Narrow',sans-serif;--sr:'OST',Georgia,serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 18px/1.55 'Sofia Sans',system-ui,sans-serif}
+.in{max-width:860px;margin:0 auto;padding:0 16px}
+a{color:var(--zo)}
+h1,h2{margin:0;font-family:var(--hd);font-weight:800;line-height:1;text-wrap:balance}
+h1{font-size:clamp(40px,7vw,68px)}
+h1 em{font:italic 400 1em/1 var(--sr);color:var(--zo)}
+h2{font-size:clamp(28px,4.4vw,40px)}
+.shapka{padding:clamp(40px,7vw,80px) 0 28px;background:radial-gradient(60% 80% at 85% 0%,rgba(142,42,42,.38),transparent 70%)}
+.nom{font:800 15px/1 var(--hd);letter-spacing:.14em;color:var(--zo);text-transform:uppercase;margin:0 0 14px}
+.lid{max-width:36em;color:var(--tx2);margin:18px 0 0}
+.podp{margin:18px 0 0;font-size:15px;color:var(--mut)}
+.oglav{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 0;padding:0;list-style:none}
+.oglav a{display:block;border:1.5px solid var(--li);border-radius:999px;padding:8px 14px;font:700 15px/1.2 'Sofia Sans';color:var(--tx);text-decoration:none}
+.oglav a:hover{border-color:var(--zo)}
+.bl{padding:30px 0;border-top:1px solid var(--li)}
+.bl .sh{display:flex;gap:14px;align-items:baseline;margin:0 0 14px}
+.bl .sh b{flex:none;font:800 44px/1 var(--hd);color:var(--zo);min-width:36px}
+.bl p{margin:10px 0 0;color:var(--tx2)}
+.bl p b{color:var(--tx)}
+.kn{display:inline-flex;align-items:center;gap:10px;margin:14px 10px 0 0;padding:14px 22px;border-radius:14px;background:var(--zo);color:#1a120a;font:800 20px/1.1 var(--hd);letter-spacing:.03em;text-decoration:none;border:0;cursor:pointer}
+.kn small{font:400 14px/1.2 'Sofia Sans';letter-spacing:0;opacity:.8}
+.kn.vt{background:transparent;color:var(--zo);border:1.5px solid var(--zo)}
+.obl{display:block;width:100%;height:auto;max-width:640px;margin:16px 0 0;border-radius:12px;border:1px solid var(--li)}
+.pole{margin:16px 0 0;background:var(--pl);border:1px solid var(--li);border-radius:14px;overflow:hidden}
+.pole .ver{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 12px 10px 16px;background:var(--pl2);border-bottom:1px solid var(--li)}
+.pole .ver span{font:800 19px/1.1 var(--hd);letter-spacing:.04em;text-transform:uppercase;color:var(--zo)}
+.pole .ver small{font:400 13px/1 'Sofia Sans';color:var(--mut);letter-spacing:0;text-transform:none;margin-left:8px}
+.kop{flex:none;padding:10px 16px;border-radius:10px;border:0;background:var(--zo);color:#1a120a;font:700 15px/1 'Sofia Sans';cursor:pointer;min-width:132px}
+.kop.ok{background:#3f6b3a;color:#fff}
+.pole pre{margin:0;padding:14px 16px;white-space:pre-wrap;word-wrap:break-word;font:400 16px/1.5 'Sofia Sans',system-ui,sans-serif;color:var(--tx);max-height:none}
+.pole.dl pre{max-height:340px;overflow:auto}
+.sp{margin:12px 0 0;padding:0 0 0 22px;color:var(--tx2)}
+.sp li{margin:8px 0 0}
+.sp b,.sp q{color:var(--tx)}
+q{quotes:"«" "»"}
+.vazh{margin:16px 0 0;padding:14px 16px;border-left:3px solid var(--zo);background:rgba(142,42,42,.18);border-radius:0 12px 12px 0;color:var(--tx);font-size:16px}
+.vazh p{margin:0 0 6px;color:var(--tx)}
+.vazh p:last-child{margin:0}
+.niz{padding:30px 0 60px;border-top:1px solid var(--li);color:var(--mut);font-size:15px}
+@media (max-width:520px){
+ body{font-size:17px}
+ .bl .sh b{font-size:36px;min-width:28px}
+ .kn{display:flex;width:100%;justify-content:center;margin-right:0}
+ .pole .ver{flex-wrap:wrap}
+ .pole .ver small{display:block;margin:4px 0 0}
+}
+</style>
+</head>
+<body>
+<header class="shapka"><div class="in">
+ <p class="nom">Отец Михаил · VPN и канал</p>
+ <h1>Две вещи - <em>и дальше без хлопот</em></h1>
+ <p class="lid">Первое: поставить на Mac программу VPN, чтобы YouTube открывался без помех. Второе: дать Игорю доступ управляющего к каналу. После этого видео на канал будем выкладывать мы сами, от Вас ничего больше не понадобится.</p>
+ <p class="podp">Подготовил Игорь Ильин, «Бизнес по-русски». Делать на ноутбуке, минут пятнадцать.</p>
+ <ul class="oglav">
+  <li><a href="#vpn">1. VPN</a></li>
+  <li><a href="#klyuch">2. Ключ</a></li>
+  <li><a href="#kanal">3. Канал</a></li>
+  <li><a href="#dostup">4. Доступ Игорю</a></li>
+ </ul>
+</div></header>
+
+<main>
+<section class="bl" id="vpn"><div class="in">
+ <div class="sh"><b>1</b><h2>Поставьте программу Amnezia</h2></div>
+ <p>Amnezia - программа VPN. В российском App Store её нет, поэтому установочный файл берётся с сайта разработчиков.</p>
+ <a class="kn" href="https://github.com/amnezia-vpn/amnezia-client/releases/download/5.1.0.6/AmneziaVPN_5.1.0.6_macos_x64.pkg">Скачать Amnezia для Mac <small>PKG, 116 МБ</small></a>
+ <ol class="sp">
+  <li>Откройте скачанный файл (он в папке «Загрузки») и нажимайте <b>«Продолжить»</b>, пока установка не закончится. Mac попросит пароль от ноутбука - это нормально.</li>
+  <li>Если Mac предложит установить <b>Rosetta</b>, согласитесь: без неё программа не запустится на новых Mac.</li>
+  <li>Если Mac пишет, что не может проверить разработчика: откройте <b>«Системные настройки»</b>, раздел <b>«Конфиденциальность и безопасность»</b>, пролистайте вниз и нажмите <b>«Всё равно открыть»</b>.</li>
+ </ol>
+</div></section>
+
+<section class="bl" id="klyuch"><div class="in">
+ <div class="sh"><b>2</b><h2>Вставьте ключ и подключитесь</h2></div>
+ <p>Ключ Игорь пришлёт отдельным сообщением. Это длинная строка, она начинается с <b>vpn://</b>.</p>
+ <ol class="sp">
+  <li>Скопируйте ключ из сообщения целиком.</li>
+  <li>Откройте Amnezia. На первом экране выберите вариант, где вставляется ключ, вставьте его и нажмите <b>«Продолжить»</b>.</li>
+  <li>Нажмите большую кнопку <b>«Подключиться»</b>. Когда загорится «Подключено», YouTube будет открываться без помех.</li>
+ </ol>
+ <div class="vazh"><p>Ключ личный, пересылать его никому не нужно. Когда VPN не нужен, нажмите в Amnezia «Отключиться».</p></div>
+</div></section>
+
+<section class="bl" id="kanal"><div class="in">
+ <div class="sh"><b>3</b><h2>Создайте канал, если его ещё нет</h2></div>
+ <p>Если канал у Вас уже есть, этот шаг пропустите.</p>
+ <ol class="sp">
+  <li>Включите Amnezia и войдите в YouTube под своим Google-аккаунтом.</li>
+  <li>Откройте <a href="https://www.youtube.com/channel_switcher" target="_blank" rel="noopener">youtube.com/channel_switcher</a> и нажмите <b>«Создать канал»</b>.</li>
+  <li>Впишите название канала и нажмите <b>«Создать»</b>.</li>
+ </ol>
+</div></section>
+
+<section class="bl" id="dostup"><div class="in">
+ <div class="sh"><b>4</b><h2>Дайте Игорю доступ управляющего</h2></div>
+ <ol class="sp">
+  <li>Откройте <a href="https://myaccount.google.com/brandaccounts" target="_blank" rel="noopener">myaccount.google.com/brandaccounts</a> и нажмите на свой канал.</li>
+  <li>Нажмите <b>«Управление правами доступа»</b>, затем значок человечка с плюсом - <b>«Пригласить новых пользователей»</b>.</li>
+  <li>Вставьте адрес Игоря (ниже кнопка «Скопировать»), выберите роль <b>«Менеджер»</b> и нажмите <b>«Пригласить»</b>.</li>
+ </ol>
+ <div class="pole"><div class="ver"><span>Адрес Игоря</span><button class="kop" data-t="t-pochta">Скопировать</button></div><pre id="t-pochta">ilin20vek@gmail.com</pre></div>
+ <div class="vazh"><p>«Менеджер» может выкладывать видео и править описания, но не может удалить канал или забрать его у Вас. Владельцем канала остаётесь Вы.</p></div>
+</div></section>
+</main>
+
+<footer class="niz"><div class="in">Что-то не получилось - напишите Игорю Ильину, он подскажет.</div></footer>
+
+<script>
+function kop(t){
+ if(navigator.clipboard&&window.isSecureContext){return navigator.clipboard.writeText(t)}
+ return new Promise(function(ok,ne){
+  var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.top='-1000px';
+  document.body.appendChild(a);a.select();a.setSelectionRange(0,t.length);
+  try{document.execCommand('copy')?ok():ne()}catch(e){ne(e)}document.body.removeChild(a)});
+}
+document.querySelectorAll('.kop').forEach(function(b){
+ b.addEventListener('click',function(){
+  var t=document.getElementById(b.dataset.t).textContent;
+  kop(t).then(function(){b.textContent='Скопировано';b.classList.add('ok');
+   setTimeout(function(){b.textContent='Скопировать';b.classList.remove('ok')},2500)},
+  function(){var r=document.createRange();r.selectNodeContents(document.getElementById(b.dataset.t));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Выделено, копируйте'});
+ });
+});
+</script>
+</body>
+</html>
